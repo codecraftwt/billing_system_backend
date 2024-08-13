@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vTPitfb8CiJ2nF4BJpx3/47zFxkLtUux60t3jMquVWQ=",
+  "Source": "billing_system",
+  "BasePath": "_content/billing_system",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
