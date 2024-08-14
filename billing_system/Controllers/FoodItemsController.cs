@@ -7,20 +7,20 @@ namespace billing_system.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class TableController : Controller
+    public class FoodItemsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public TableController(ApplicationDbContext context)
+        public FoodItemsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public async Task<ResponseModel> GetDiningTables()
+        public async Task<ResponseModel> GetFoodItems()
         {
             try
             {
-                var resp = await _context.DiningTables.ToListAsync();
+                var resp = await _context.FoodItems.ToListAsync();
                 if (resp == null)
                 {
                     return new ResponseModel()

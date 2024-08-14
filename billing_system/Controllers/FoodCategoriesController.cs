@@ -7,20 +7,20 @@ namespace billing_system.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class TableController : Controller
+    public class FoodCategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public TableController(ApplicationDbContext context)
+        public FoodCategoriesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public async Task<ResponseModel> GetDiningTables()
+        public async Task<ResponseModel> GetFoodCategories()
         {
             try
             {
-                var resp = await _context.DiningTables.ToListAsync();
+                var resp = await _context.FoodCategories.ToListAsync();
                 if (resp == null)
                 {
                     return new ResponseModel()
@@ -39,7 +39,7 @@ namespace billing_system.Controllers
             }
             catch (Exception ex)
             {
-                return new ResponseModel
+                return  new ResponseModel
                 {
                     Status = "Failed",
                     Message = $"Failed to fetch data: {ex.Message}",
